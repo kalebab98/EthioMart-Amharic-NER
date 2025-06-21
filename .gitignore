@@ -1,2 +1,7 @@
 .venv
 .csv
+photos/
+.env
+*.pyc
+*.DS_Store
+scraping_session*
