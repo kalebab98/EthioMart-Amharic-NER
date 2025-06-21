@@ -1,0 +1,29 @@
+# Telegram scraping
+telethon==1.30.0
+
+# Data manipulation
+pandas==2.2.2
+
+# Tokenization & text preprocessing
+regex==2023.12.25
+
+# Jupyter Notebook (for .ipynb files)
+notebook
+
+# Hugging Face Transformers & Datasets (for future tasks)
+transformers==4.41.1
+datasets==2.19.1
+
+# Tokenizers (used under the hood by transformers)
+tokenizers==0.19.1
+
+# Evaluation
+seqeval==1.2.2
+scikit-learn==1.5.0
+
+# Optional: For model interpretability
+shap==0.45.0
+lime==0.2.0.1
+
+# System tools (optional)
+tqdm
