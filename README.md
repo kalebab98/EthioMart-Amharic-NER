@@ -25,7 +25,7 @@ Create a high-quality **CoNLL-formatted dataset** for fine-tuning NER models by 
 | File                     | Description                             |
 |--------------------------|-----------------------------------------|
 | `amharic_ner_data.conll` | Labeled Amharic messages in CoNLL format |
-| `label_examples.txt`     | Sample annotated messages for reference |
+
 
 ---
 
