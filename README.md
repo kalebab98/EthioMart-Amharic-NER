@@ -1,38 +1,43 @@
-# 📦 **EthioMart Amharic NER System**
+# 🧩 Task 1: Data Ingestion & Preprocessing
 
-**EthioMart** aims to become the central hub for Telegram-based e-commerce in Ethiopia by aggregating business data such as **product names**, **prices**, and **locations** from multiple independent vendor channels.  
-This project builds an **Amharic Named Entity Recognition (NER)** system to extract and structure such data for downstream analytics and business decision-making.
-
----
-
-## 🔍 **Project Overview**
-
-With the growing use of **Telegram for commerce in Ethiopia**, vendors are scattered across isolated channels. This project solves the **fragmentation problem** by:
-
-- 🔄 **Scraping** real-time messages and media from Telegram vendor channels  
-- 🧹 **Preprocessing** Amharic text using custom tokenization and normalization  
-- 🏷️ **Labeling** key entities in Amharic: `Product`, `Price`, `Location`  
-- 🤖 **Fine-tuning transformer-based models**: `XLM-RoBERTa`, `mBERT`, `AfroXLMR`  
-- 📊 **Generating vendor analytics** to support micro-lending decisions  
+> Collecting and preparing Amharic e-commerce messages from Telegram channels for NER tasks.
 
 ---
 
-## 📁 **Project Structure**
+## 🚀 Objective
+
+This task sets up the full pipeline to:
+
+- 🔌 Connect to Ethiopian Telegram e-commerce channels.
+- 📥 Scrape messages, metadata, and images.
+- 🧹 Clean and tokenize Amharic text.
+- 💾 Save structured data in CSV format for further analysis and annotation.
+
+---
+
+## 📁 Files Included
+
+ Description                                  |
+----------------------------------------------|
+ Scraper using Telethon to collect Telegram data (text + images). |
+ Preprocessing script (cleaning + tokenization). |
+ Raw data collected from Telegram channels.   |
+ Cleaned and tokenized Amharic text.   |
+
+---
+
+## 🔗 Telegram Channels Scraped
+
+- `@Shageronlinestore`
+- `@ZemenExpress`
+- `@nevacomputer`
+- `@Fashiontera`
+- `@aradabrand2`
+- `@Shewabrand`
+
+---
+
+## 🔧 Setup Instructions
 
 ```bash
-ethiomart-amharic-ner/
-│
-├── data/
-│   ├── raw/                      # Raw scraped data
-│   └── processed/                # Cleaned and labeled datasets
-│       ├── amharic_ner_data.conll
-│       
-├── notebooks/
-│   └── 01_data_ingestion.ipynb   # Telegram scraping logic
-│
-├── scripts/
-│   └── 01_text_preprocessing.py  # Cleaning, normalization, tokenization
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
+pip install telethon pandas
