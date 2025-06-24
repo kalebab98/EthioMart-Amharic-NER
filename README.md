@@ -40,7 +40,7 @@ ethiomart-amharic-ner/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-
+```
 
 # 📦 Amharic E-Commerce Data Extractor: Tasks 3–6
 
