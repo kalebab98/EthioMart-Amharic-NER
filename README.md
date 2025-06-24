@@ -1,38 +1,21 @@
-# 📦 **EthioMart Amharic NER System**
+## ✅ Task 3: Fine-Tune NER Model (Amharic)
 
-**EthioMart** aims to become the central hub for Telegram-based e-commerce in Ethiopia by aggregating business data such as **product names**, **prices**, and **locations** from multiple independent vendor channels.  
-This project builds an **Amharic Named Entity Recognition (NER)** system to extract and structure such data for downstream analytics and business decision-making.
+### Goal:
+Train a transformer-based model (AfroXLMR) on annotated Amharic Telegram data to extract key business entities: **Product**, **Price**, and **Location**.
 
----
+### Steps:
+1. **Install Libraries**:
+2. 2. **Preprocessing**:
+- Read CoNLL-formatted data (`amharic_ner_data.conll`)
+- Encode labels and tokenize Amharic text using `AutoTokenizer`
 
-## 🔍 **Project Overview**
+3. **Model**:
+- Pretrained: `Davlan/afro-xlmr-base`
+- Fine-tuned using Hugging Face's `Trainer`
 
-With the growing use of **Telegram for commerce in Ethiopia**, vendors are scattered across isolated channels. This project solves the **fragmentation problem** by:
+4. **Metrics**:
+- Evaluation via `seqeval` (F1, precision, recall)
 
-- 🔄 **Scraping** real-time messages and media from Telegram vendor channels  
-- 🧹 **Preprocessing** Amharic text using custom tokenization and normalization  
-- 🏷️ **Labeling** key entities in Amharic: `Product`, `Price`, `Location`  
-- 🤖 **Fine-tuning transformer-based models**: `XLM-RoBERTa`, `mBERT`, `AfroXLMR`  
-- 📊 **Generating vendor analytics** to support micro-lending decisions  
-
----
-
-## 📁 **Project Structure**
-
-```bash
-ethiomart-amharic-ner/
-│
-├── data/
-│   ├── raw/                      # Raw scraped data
-│   └── processed/                # Cleaned and labeled datasets
-│       ├── amharic_ner_data.conll
-│       
-├── notebooks/
-│   └── 01_data_ingestion.ipynb   # Telegram scraping logic
-│
-├── scripts/
-│   └── 01_text_preprocessing.py  # Cleaning, normalization, tokenization
-│
-├── README.md
-├── requirements.txt
-└── .gitignore
+5. **Save Artifacts**:
+- Trained model and tokenizer saved to `amharic_ner_final_model/`
+- Compressed as `amharic_ner_model.zip` for deployment
