@@ -42,7 +42,7 @@ ethiomart-amharic-ner/
 └── .gitignore
 ```
 
-# 📦 Amharic E-Commerce Data Extractor: Tasks 3–6
+# From Tasks 3–6
 
 This repository contains the implementation of Tasks 3 through 6 of the **B5W4 Challenge – Amharic E-Commerce Data Extractor**, which focuses on fine-tuning transformer models for Amharic Named Entity Recognition (NER), comparing models, interpreting predictions, and building a FinTech-ready vendor analytics engine.
 
